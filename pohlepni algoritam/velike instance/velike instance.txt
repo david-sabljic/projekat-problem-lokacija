@@ -1,0 +1,26 @@
+Broj klijenata: 2000	
+Broj postrojenja: 500
+Generisanja: 10
+Ukupno vrijeme izvrsavanja: 19,310203 s
+Prosjecno vrijeme izvrsavanja: 1,9310203 s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

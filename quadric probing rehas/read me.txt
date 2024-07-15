@@ -1,0 +1,18 @@
+Kvadratično ispitivanje je otvorena šema adresiranja u računarskom programiranju za rešavanje heš kolizija u heš tabelama. Kvadratično ispitivanje funkcioniše tako što uzima 
+originalni heš indeks i dodaje uzastopne vrednosti proizvoljnog kvadratnog polinoma dok se ne pronađe otvoreni slot. Kvadratno ispitivanje može biti efikasniji algoritam u otvorenoj adresnoj tabeli, jer bolje izbegava problem grupisanja koji se može pojaviti kod linearnog sondiranja, iako nije imun. Takođe obezbeđuje dobro keširanje memorije jer čuva neki lokalitet reference; međutim, linearno ispitivanje ima veću lokalizaciju i, samim tim, bolje performanse keša.
+
+Heš funkcija: Funkcija koja konvertuje dati veliki broj u malu praktičnu celobrojnu vrednost. Preslikana celobrojna vrednost se koristi kao indeks u heš tabeli. Jednostavno rečeno, heš funkcija preslikava veliki broj ili string u mali ceo broj koji se može koristiti kao indeks u heš tabeli.
+
+Ovaj kod implementira heš tabelu koristeći kvadratno sondiranje kao tehniku ponovnog heširanja. Evo objašnjenja ključnih delova:
+
+__init__ metoda se koristi za inicijalizaciju heš tabele. Prima veličinu heš tabele i inicijalizuje listu hash_table sa None vrednostima.
+
+hash_function metoda računa heš vrednost za zadati ključ koristeći operaciju modulo.
+
+rehash metoda izvršava kvadratno sondiranje kako bi se izračunala nova heš vrednost. Koristi se formula (old_hash + i ** 2) % self.size, gde je i inkrement koji se povećava u svakoj iteraciji.
+
+insert metoda ubacuje par ključ-vrednost u heš tabelu. Ako je odgovarajući slot u heš tabeli prazan, par se direktno ubacuje. U suprotnom, koristi se kvadratno sondiranje kako bi se pronašao sledeći slobodan slot i ubacio par.
+
+get metoda dohvata vrednost asociiranu sa zadatim ključem iz heš tabele. Prvo se proverava da li je ključ na svom originalnom mestu u heš tabeli. Ako jeste, vraća se odgovarajuća vrednost. U suprotnom, koristi se kvadratno sondiranje da bi se pronašao ključ i vrednost.
+
+U primeru korišćenja se prvo kreira objekat hash_tabela sa veličinom 10. Zatim se ubacuju neki parovi ključ-vrednost pomoću insert metode. Na kraju se poziva get metoda da bi se dohvatile vrednosti za određene ključeve i ispisale na ekranu.

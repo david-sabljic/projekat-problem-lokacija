@@ -1,0 +1,30 @@
+Broj klijenata: 20	
+Broj postrojenja: 5
+velicina populacije: 10
+broj ponavljanja: 20
+Generisanja: 10
+Ukupno vrijeme izvrsavanja: 0,366015 s
+Prosjecno vrijeme izvrsavanja: 0,0366015s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
